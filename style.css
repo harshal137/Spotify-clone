@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:black;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: wheat;
+}
+.main {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: black;
+    width: 340px;
+    border-radius: 0.8rem;
+    margin: 10px 5px 0 5px;
+}
+.main-content{
+    background-color: #121212;
+    flex: 1;
+    border-radius: 1rem;
+    margin: 10px 5px 0 0px;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.music-player {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    height: 75px;
+    width: 100%;
+}
+
+.nav {
+    background-color: #121212;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 130px;
+    padding: 0.5rem 0.75rem;
+}
+
+.nav-option a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+}
+
+.nav-option i{
+    font-size: 1.1rem;
+}
+
+.nav-option {
+    line-height: 2.5rem;
+    padding: 0.5rem 0.75rem;
+    margin-left: 0.5rem;
+    opacity: 0.7;
+    transition: 0.5s ease;
+}
+
+.nav-option:hover{
+    opacity: 1;
+}
+
+.library {
+    background-color: #121212;
+    height: 100%;
+    border-radius: 1rem;
+    margin: 5px 0 0 0;
+    padding: 0.5rem 0.75rem;
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.lib-option img {
+    height: 1rem;
+    width: 1rem;
+}
+
+.icons{
+    display: flex;
+}
+
+.icons i{
+    font-size: 1.1rem;
+    margin:0 0.75rem;
+    opacity: 0.6;
+    transition:0.5s ease ;
+}
+
+.icons i:hover{
+    opacity: 1;
+}
+
+.lib-box {
+    height: 8em;
+    background-color: #232323;
+    border-radius: 0.8rem;
+    margin: 0.5rem 0 0.75rem 0;
+    padding: 0.75rem 1rem;
+}
+
+.box-p1 {
+    font-size: 1rem;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+    font-weight: 500;
+}
+
+.box-p2 {
+    opacity: 0.9;
+    font-size: 0.8rem;
+    margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.badge{
+    font-weight: 700;
+    margin: 0.75rem 0 0.5rem 0.5rem;
+    padding: 0.25rem 1rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    height: 2rem;
+}
+
+.sticky-nav{
+    height: 7rem;
+    background-color:#121212;
+    margin-top: 0.5rem;
+    position: sticky;
+    top: 0;
+}
+
+.sticky-nav-top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.stick-nav-icons{
+    margin: 0.75rem 0 0.5rem 1rem;
+}
+
+.stick-nav-icons img{
+    cursor: pointer;
+}
+.stick-nav-badge{
+    margin-right: 0.5rem;
+}
+.stick-nav-badge button{
+    transition: 0.5s ease;
+    font-weight: 700;
+}
+.stick-nav-badge button:hover{
+    transform: scale(1.05);
+}
+
+.stick-nav-badge i{
+    margin:  0 0.75rem;
+}
+
+.install{
+    background-color: black;
+    color: white;
+    padding:0.25rem 1.5rem 0.25rem 1rem ;
+}
+
+.fa-bell{
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+@media (max-width:1000px){
+    .hide{
+        display: none;
+    }
+}
+
+.sticky-nav-bottom{
+    margin: 0rem 0 0.5rem 0.5rem;
+}
+
+.sticky-nav-bottom .badge{
+    background-color:rgb(128, 128, 128,0.2);
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: 0.5s  ease;
+}
+
+.sticky-nav-bottom .badge:hover{
+    background-color:rgb(128, 128, 128,0.3);
+}
+
+.cards h3{
+    margin: 0.5rem 0 0.5rem 0.75rem;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.5rem 0.75rem;
+}
+
+.card{
+    height: 16rem;
+    width: 11rem;
+    background-color: #232323;
+    margin: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.8rem;
+    transition: 0.5s ease;
+}
+
+.card:hover{
+    background-color:rgb(128, 128, 128,0.4);
+}
+
+.card img{
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.card-container .hover-img{
+    width: 2.5rem;
+    position: relative;
+    float: right;
+    bottom: 2.4rem;
+    right: 1.1rem;
+    z-index: -1;
+    /* display: none; */
+    opacity: 0.8;
+    transition: 0.6s ease-in-out;
+}
+
+.card:hover .hover-img{
+    opacity: 1;
+    z-index: 2;
+    transform: translateY(-20px);
+}
+
+.card-title{
+    margin: 0.3rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.card-info{
+    font-size: 0.7rem;
+    margin: 0.2rem;
+}
+
+.footer{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line{
+    width: 90%;
+    height: 30%;
+    border-top: 1px solid white;
+    opacity: 0.1;
+}
+
+.music-player{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.album {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 5rem;
+    padding: 0.75rem 0 0.75rem 1rem ;
+}
+
+.album img{
+    width: 20%;
+    height: 80%;
+    margin-right: 0.75rem;
+}
+
+.album-info{
+    overflow: hidden;
+}
+.album-info .title{
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.album-info .info{
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.player{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.player-controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player-controls img{
+    width: 12px;
+    height:12px;
+    margin:0 1rem;
+    opacity: 0.4;
+}
+
+.player-controls img:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.playback-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+ .slider input{
+    margin: 0 0.5rem;
+    height: 5px;
+    width: 25rem;
+    outline: none;
+    background-color: #f2f2f2;
+    border-radius: 25px;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:25%;
+    margin-right: 0.5rem ;
+}
+.controls i{
+    font-size: 1.25rem;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+@media (max-width:1100px){
+    .album, .controls{
+        display: none;
+    }
+    .player{
+        position: fixed;
+        left: 25%;
+        right: 255;
+    }
+}
+
